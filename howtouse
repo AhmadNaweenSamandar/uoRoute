@@ -1,0 +1,281 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #FFFFFF;
+            color: #003366;
+        }
+
+        /* Dark Teal Section */
+        .intro-section {
+            background-color: #073132; /* Dark teal */
+            color: #92A6A8;
+            padding: 100px 20px;
+            text-align: center;
+            height: calc(100vh - 50px);
+        }
+
+        .intro-section h1 {
+            font-size: 1.4em;
+            color: #92A6A8;
+            font-family: "Aptos", sans-serif;
+            font-weight: normal;
+            margin-bottom: 60px;
+        }
+
+        /* Subheader Text */
+        .subheader {
+            font-size: 3em;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            margin: 5px 0;
+        }
+
+        .description {
+            font-family: 'Aptos', sans-serif;
+            font-size: 1em;
+            color: #92A6A8;
+            max-width: calc(100% - 4cm);
+            margin: 20px auto 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Button styling */
+        .details-button {
+            background-color: #2DFBCC;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1em;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Image below details button */
+        .details-image {
+            width: 600px;
+            height: 800px;
+            margin: 10px auto 0; /* Adds 10px space below button */
+            display: block;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        /* Steps Section */
+        .steps-section {
+            padding-top: 800px; /* Adds 800px space from the top */
+            padding-bottom: 40px;
+            font-family: Arial, sans-serif;
+            color: #003366;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Each Step Container */
+        .step-container {
+            width: 100vw; /* Full viewport width to remove side margins */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            background-color: #f2f2f2; /* Lighter silver */
+            border-radius: 0; /* Removes rounded edges */
+            position: relative;
+        }
+
+        /* Step Title */
+        .step-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #073132;
+            margin-bottom: 10px;
+        }
+
+        /* Step Text */
+        .step-text {
+            flex: 1;
+            color: #003366;
+            text-align: center;
+            padding: 20px;
+            max-width: 500px;
+        }
+
+        .step-description {
+            font-size: 1em;
+            color: rgba(0, 0, 0, 0.7);
+            line-height: 1.6;
+        }
+
+        /* Step Image with Shadow */
+        .step-container img {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        /* Individual Image Sizes */
+        .step1 img {
+            width: 800px;
+            height: 400px;
+            margin: 0 20px;
+        }
+
+        .step2 img {
+            width: 800px;
+            height: 400px;
+            margin: 0 20px;
+        }
+
+        .step3 img {
+            width: 650px;
+            height: 400px;
+            margin: 0 20px;
+        }
+
+        /* Vertical Divider Line */
+        .vertical-line {
+            height: 100px;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, black, transparent);
+            margin: 20px auto;
+        }
+
+        /* New Teal Rectangle Section */
+        .final-section {
+            background-color: #073132; /* Dark teal */
+            color: white;
+            text-align: center;
+            padding: 200px 0;
+            margin: 20px 10px 10px; /* 20px top, 10px bottom, 10px left and right */
+        }
+
+        .final-section h2 {
+            font-size: 3em; /* Size for "One. Click. All is yours." */
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            margin: 0;
+            line-height: 1.2; /* Adjust line height for spacing */
+        }
+
+        .final-section p {
+            font-size: 1em; /* Size for "Navigation with uORoute is easy..." */
+            margin: 20px 0; /* Space between this and the buttons */
+        }
+
+        /* Button Icons */
+        .button-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between buttons */
+        }
+
+        .button-icons img {
+            width: 170px; /* Adjust size as needed */
+            height: 100; /* Maintain aspect ratio */
+        }
+
+        /* Transparent White Text */
+        .final-section .app-text {
+            font-family: 'Aptos', sans-serif;
+            font-size: 0.5em; /* Size for "uORoute Application" */
+            color: rgba(255, 255, 255, 0.5); /* Transparent white */
+            margin-top: 20px; /* Space between buttons and text */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dark Teal Intro Section -->
+    <div class="intro-section">
+        <h1>How To Use!</h1>
+        <div class="subheader">You Sync</div>
+        <div class="subheader">You Schedule</div>
+        <div class="subheader">You Navigate</div>
+        <p class="description">“Figure out how to navigate through the campus with ease,<br>
+            sync data and get effortless updates regarding your schedule,<br>
+            All with uORoute!”</p>
+        <button class="details-button" onclick="scrollToSteps()">See details ></button>
+        
+        <!-- Image Below Button -->
+        <img src="images/uOttawa-Map.jpg" alt="Details Section Image" class="details-image" />
+    </div>
+
+    <!-- Steps Section -->
+    <div class="steps-section" id="stepsSection">
+        
+        <!-- Step 1 -->
+        <div class="step-container step1">
+            <img src="images/download_uORoute.jpg" alt="Download App Image" />
+            <div class="step-text">
+                <div class="step-title">1. Download & Install the App</div>
+                <div class="step-description">
+                    Click the appropriate button below to download<br>
+                    the app on iOS or Android. Follow the on-screen<br>
+                    instructions to complete installation.
+                </div>
+            </div>
+        </div>
+
+        <div class="vertical-line"></div>
+
+        <!-- Step 2 -->
+        <div class="step-container step2">
+            <div class="step-text">
+                <div class="step-title">2. Login with uZone credentials</div>
+                <div class="step-description">
+                    Use your uZone credentials to log in.<br>
+                    Make sure to authorize access to sync your<br>
+                    schedule and campus details with the app.
+                </div>
+            </div>
+            <img src="images/login_uZone.jpg" alt="uZone Login Image" />
+        </div>
+
+        <div class="vertical-line"></div>
+
+        <!-- Step 3 -->
+        <div class="step-container step3">
+            <img src="images/Features_pic.jpg" alt="Features Image" />
+            <div class="step-text">
+                <div class="step-title">3. Enjoy the Features</div>
+                <div class="step-description">
+                    Explore the app’s features, such as easy campus navigation,<br>
+                    schedule syncing, and personalized notifications for<br>
+                    a smoother study experience!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Teal Rectangle Section -->
+    <div class="final-section">
+        <h2>One. Click.<br>All is yours.<br> </h2>
+        <p>Navigation with uORoute is easy - Just like a click to your uZone account.</p>
+        <div class="button-icons">
+            <a href="YOUR_IOS_LINK"><img src="images/IOS-button.jpg" alt="IOS Button"></a>
+            <a href="YOUR_ANDROID_LINK"><img src="images/andriod-button.jpg" alt="Android Button"></a>
+        </div>
+        <div class="app-text">uORoute Application</div>
+    
+    </div>
+
+    <script>
+        function scrollToSteps() {
+            document.getElementById("stepsSection").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
